@@ -17,7 +17,7 @@ const Home = () => {
       <div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 m-8" >
-          {users.map((user) => (
+          {users?.map((user) => (
             <Link key={user.id} to={`/products/${user.name}`}>
             <div  className="card w-72 bg-base-100 shadow-xl ">
               <figure className="px-10 pt-10">

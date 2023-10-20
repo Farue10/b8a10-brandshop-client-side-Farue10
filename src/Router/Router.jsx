@@ -31,23 +31,23 @@ const router = createBrowserRouter([
         {
             path: '/products/:brand',
             element: <Products></Products>,
-            loader: ({ params }) => fetch(`http://localhost:5000/user/${params.brand}`)
+            loader: ({ params }) => fetch(`https://assignment-10-server-xi-three.vercel.app/user/${params.brand}`)
         },
         {
             path: '/userSingle/:id',
             element: <PrivateRoute><Details></Details></PrivateRoute>,
-            loader: ({ params }) => fetch(`http://localhost:5000/userSingle/${params.id}`)
+            loader: ({ params }) => fetch(`https://assignment-10-server-xi-three.vercel.app/userSingle/${params.id}`)
            
         },
         {
             path:'/cart',
             element:<Cart></Cart>,
-            loader:()=>fetch('http://localhost:5000/deatils')
+            loader:()=>fetch('https://assignment-10-server-xi-three.vercel.app/deatils')
         },
         {
             path:'/update/:id',
             element:<PrivateRoute><Update></Update></PrivateRoute>,
-            loader:({params})=>fetch(`http://localhost:5000/update/${params.id}`)
+            loader:({params})=>fetch(`https://assignment-10-server-xi-three.vercel.app/update/${params.id}`)
         },
         {
             path:'/login',

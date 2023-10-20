@@ -7,7 +7,7 @@ const Cart = () => {
     const [users,setuser]=useState(loader)
     
    const handleClick=(_id)=>{
-    fetch(`http://localhost:5000/deatils/${_id}`,{
+    fetch(`https://assignment-10-server-xi-three.vercel.app/deatils/${_id}`,{
         method: 'DELETE',
     })
     .then(res=>res.json())
@@ -23,11 +23,9 @@ const Cart = () => {
         <div>
             <Header></Header>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 m-8" >
-          {users.map((user) => (
+          {users?.map((user) => (
             <div  key={user.id}  className="card w-72 bg-base-100 shadow-xl ">
-              <figure className="px-10 pt-10">
-                <img src={user.image} alt="Shoes" className="rounded-xl" />
-              </figure>
+        
               <div className="card-body items-center text-center">
                 <h2 className="card-title">Name: {user.name}</h2>
                 <h2 className="card-title">Brand Name: {user.name}</h2>
