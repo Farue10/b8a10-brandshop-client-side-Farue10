@@ -66,10 +66,10 @@ const Products = () => {
               <img src={user.photo} alt="Shoes" className="rounded-xl" />
             </figure>
             <div className="card-body items-center text-center">
-              <h2 className="card-title">{user.name}</h2>
-              <h2 className="card-title">{user.brand}</h2>
-              <h2 className="card-title">{user.price}</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <h2 className="card-title">Name: {user.name}</h2>
+              <h2 className="card-title">Brand Name: {user.brand}</h2>
+              <h2 className="card-title">Price: {user.price}</h2>
+              <h2 className="card-title">Rating: {user.rating}</h2>
               <div className="card-actions">
              
                <Link to={`/userSingle/${user._id}`}> <button className="btn btn-primary">Details</button></Link>

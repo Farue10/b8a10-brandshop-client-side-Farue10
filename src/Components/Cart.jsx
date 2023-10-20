@@ -29,7 +29,8 @@ const Cart = () => {
                 <img src={user.image} alt="Shoes" className="rounded-xl" />
               </figure>
               <div className="card-body items-center text-center">
-                <h2 className="card-title">{user.name}</h2>
+                <h2 className="card-title">Name: {user.name}</h2>
+                <h2 className="card-title">Brand Name: {user.name}</h2>
               </div>
               <button onClick={()=>handleClick(user._id)} className="btn btn-primary">Delete</button>
             </div>
