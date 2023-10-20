@@ -1,0 +1,34 @@
+[
+    
+    {
+        "id": "1",
+        "name": "toyota",
+        "image":"https://i.ibb.co/nMWLgM5/Toyota-Corolla-Furia-Concept.jpg"
+    },
+    {
+        "id": "2",
+        "name": "farari",
+        "image":"https://i.ibb.co/QfKL17W/Ferriry.jpg"
+    },
+    {
+        "id": "3",
+        "name": "ford",
+        "image":"https://i.ibb.co/QMSb8qF/th-2.jpg"
+    },
+    {
+        "id": "4",
+        "name": "tesla",
+        "image":"https://i.ibb.co/hdZk5dB/th-1.jpg"
+    },
+    {
+        "id": "5",
+        "name": "honda",
+        "image":"https://i.ibb.co/NnJDS51/honda.jpg"
+    },
+    {
+        "id": "6",
+        "name": "bmw",
+        "image":"https://i.ibb.co/ky0C8cD/th.jpg"
+    }
+      
+]
