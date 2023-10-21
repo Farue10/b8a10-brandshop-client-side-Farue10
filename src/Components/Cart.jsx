@@ -12,7 +12,7 @@ const Cart = () => {
     const [email,setEmail] = useState('')
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/deatils?user=${user?.email}`)
+        fetch(`https://assignment-10-server-xi-three.vercel.app/deatils?user=${user?.email}`)
         .then(res=>res.json())
         .then(data=>{
             setEmail(data);
@@ -22,7 +22,7 @@ const Cart = () => {
 
     console.log(email);
    const handleClick=(_id)=>{
-    fetch(`http://localhost:5000/deatils/${_id}`,{
+    fetch(`https://assignment-10-server-xi-three.vercel.app/deatils/${_id}`,{
         method: 'DELETE',
     })
     .then(res=>res.json())

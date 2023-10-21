@@ -13,7 +13,7 @@ const Details = () => {
 
     const handleclick = (name,image,brand)=>{
         const cardInfo = {name,image,brand,email}
-        fetch('http://localhost:5000/deatils',{
+        fetch('https://assignment-10-server-xi-three.vercel.app/deatils',{
             method: 'POST',
             headers:{
                 'content-type': 'application/json'
