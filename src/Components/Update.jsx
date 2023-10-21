@@ -18,7 +18,7 @@ const Update = () => {
     const rating = form.rating.value;
     const user = { photo, name, brand, price, type, short, rating };
     console.log('newwwwwwwwww',user);
-    fetch(`https://assignment-10-server-xi-three.vercel.app/updateed/${_id} `, {
+    fetch(`http://localhost:5000/updateed/${_id} `, {
         method: 'PUT',
         headers: {
             'content-type':'application/json'

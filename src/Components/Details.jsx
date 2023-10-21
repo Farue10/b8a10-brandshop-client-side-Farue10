@@ -1,15 +1,19 @@
 import {  useLoaderData } from "react-router-dom";
 import Header from "./Header";
 import swal from 'sweetalert'
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
 
 
 const Details = () => {
+    const {user}  = useContext(AuthContext)
+    const {email} = user
     const loader=useLoaderData()
     const {image,name,brand}=loader
 
     const handleclick = (name,image,brand)=>{
-        const cardInfo = {name,image,brand}
-        fetch('https://assignment-10-server-xi-three.vercel.app/deatils',{
+        const cardInfo = {name,image,brand,email}
+        fetch('http://localhost:5000/deatils',{
             method: 'POST',
             headers:{
                 'content-type': 'application/json'

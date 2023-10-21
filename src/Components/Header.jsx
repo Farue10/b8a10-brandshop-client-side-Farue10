@@ -47,6 +47,7 @@ const Header = () => {
     </ul>
   </div>
   <div className="navbar-end">
+ 
   {
             user && <div className="text-sm">
               <span>{user.email}</span>

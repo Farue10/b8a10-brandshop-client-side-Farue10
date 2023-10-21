@@ -14,7 +14,7 @@ const Product = () => {
         const rating = form.rating.value
         const user = {photo,name,brand,price,type,short,rating}
         console.log(user);
-        fetch('https://assignment-10-server-xi-three.vercel.app/users',{
+        fetch('http://localhost:5000/users',{
             method: 'POST',
             headers:{
                 'content-type': 'application/json'

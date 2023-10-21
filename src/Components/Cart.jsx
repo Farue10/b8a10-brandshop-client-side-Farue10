@@ -1,13 +1,28 @@
 import { useLoaderData } from "react-router-dom";
 import Header from "./Header";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const Cart = () => {
+    const {user} = useContext(AuthContext)
+
     const loader= useLoaderData()
     const [users,setuser]=useState(loader)
-    
+    const [email,setEmail] = useState('')
+
+    useEffect(()=>{
+        fetch(`http://localhost:5000/deatils?user=${user?.email}`)
+        .then(res=>res.json())
+        .then(data=>{
+            setEmail(data);
+        })
+    },[user])
+
+
+    console.log(email);
    const handleClick=(_id)=>{
-    fetch(`https://assignment-10-server-xi-three.vercel.app/deatils/${_id}`,{
+    fetch(`http://localhost:5000/deatils/${_id}`,{
         method: 'DELETE',
     })
     .then(res=>res.json())
@@ -23,7 +38,7 @@ const Cart = () => {
         <div>
             <Header></Header>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 m-8" >
-          {users?.map((user) => (
+          {email && email.map((user) => (
             <div  key={user.id}  className="card w-72 bg-base-100 shadow-xl ">
         
               <div className="card-body items-center text-center">

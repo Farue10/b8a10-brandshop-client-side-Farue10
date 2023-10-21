@@ -7,12 +7,18 @@ import backgroundimg2 from "../assets/carimg2.png";
 import backgroundimg3 from "../assets/desinging-ai-car.jpg";
 import backgroundimg4 from "../assets/backgorund1.jpg";
 import backgroundimg5 from "../assets/backgorund2.jpg";
+// import { useState } from "react";
 
 const Home = () => {
-  const users = useLoaderData();
+    const users = useLoaderData();
+  
+
+
+
   return (
     <div>
-      <Header></Header>
+       
+      <Header ></Header>
       <Banner></Banner>
       <div>
         
